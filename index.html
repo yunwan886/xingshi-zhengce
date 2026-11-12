@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>开放共赢 强贸兴邦 · 从一只集装箱看一个国</title>
+<meta name="description" content="2026—2027学年第一学期《形势与政策》专题一实践作业：在高水平对外开放中迈向贸易强国">
+<style>
+:root{
+  --paper:#f7f2e7;
+  --paper-2:#f1ead9;
+  --ink:#242019;
+  --ink-2:#4a4238;
+  --ink-3:#7d7264;
+  --red:#9e2b1e;
+  --red-2:#c0392b;
+  --gold:#b08b4f;
+  --gold-2:#d9bd8a;
+  --deep:#1d3a33;
+  --line:rgba(176,139,79,.38);
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{
+  background:#e8e1d2;
+  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",sans-serif;
+  color:var(--ink);
+  line-height:1.95;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+.serif{font-family:"Songti SC","STSong","SimSun",Georgia,serif}
+
+/* ============ 容器 ============ */
+.page{
+  max-width:680px;margin:0 auto;background:var(--paper);
+  position:relative;overflow:hidden;
+  box-shadow:0 0 60px rgba(60,45,25,.16);
+}
+/* 纸纹 */
+.page::before{
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:1;opacity:.5;
+  background-image:
+    radial-gradient(circle at 20% 30%,rgba(176,139,79,.055) 0 1px,transparent 1px),
+    radial-gradient(circle at 70% 65%,rgba(176,139,79,.05) 0 1px,transparent 1px);
+  background-size:23px 23px,31px 31px;
+}
+.wrap{position:relative;z-index:2}
+
+/* ============ 顶部进度 ============ */
+#bar{position:fixed;top:0;left:0;height:3px;width:0;z-index:99;
+  background:linear-gradient(90deg,var(--red),var(--gold));transition:width .1s linear}
+
+/* ============ 封面 ============ */
+.cover{position:relative;height:100svh;min-height:560px;max-height:900px;overflow:hidden;background:#0d1512}
+.cover-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  animation:kenburns 22s ease-in-out infinite alternate;opacity:.92}
+@keyframes kenburns{from{transform:scale(1.02) translate(0,0)}to{transform:scale(1.13) translate(-1.5%,-1.5%)}}
+.cover::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(10,20,16,.72) 0%,rgba(10,20,16,.28) 38%,rgba(10,20,16,.55) 72%,rgba(10,20,16,.93) 100%)}
+.cover-inner{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;
+  justify-content:center;align-items:center;text-align:center;padding:0 26px}
+
+.kicker{font-size:11px;letter-spacing:.42em;color:var(--gold-2);margin-bottom:26px;
+  text-indent:.42em;opacity:0;animation:fadeUp 1s .3s forwards}
+.cover h1{
+  font-family:"Songti SC","STSong","SimSun",serif;
+  font-size:clamp(38px,9.5vw,70px);line-height:1.24;color:#fdf8ec;
+  letter-spacing:.1em;text-indent:.1em;font-weight:600;
+  text-shadow:0 4px 40px rgba(0,0,0,.6);
+  opacity:0;animation:fadeUp 1.2s .5s forwards;
+}
+.cover h1 em{font-style:normal;color:var(--gold-2)}
+.cover-sub{margin-top:22px;font-size:14px;line-height:2;color:rgba(253,248,236,.82);
+  letter-spacing:.06em;max-width:440px;opacity:0;animation:fadeUp 1.2s .8s forwards}
+.cover-meta{margin-top:38px;padding-top:20px;border-top:1px solid rgba(217,189,138,.3);
+  font-size:11px;letter-spacing:.2em;color:rgba(253,248,236,.6);
+  opacity:0;animation:fadeUp 1.2s 1.1s forwards}
+@keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+.scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:4;
+  color:rgba(253,248,236,.55);font-size:10px;letter-spacing:.3em;text-align:center}
+.scroll-hint span{display:block;width:1px;height:36px;margin:10px auto 0;
+  background:linear-gradient(180deg,var(--gold-2),transparent);animation:drop 2s infinite}
+@keyframes drop{0%{opacity:0;transform:scaleY(.2)}50%{opacity:1;transform:scaleY(1)}100%{opacity:0;transform:scaleY(.2)}}
+
+/* ============ 导语 ============ */
+.lead{padding:64px 34px 10px;position:relative}
+.lead p{font-size:16.5px;color:var(--ink-2);line-height:2.15;margin-bottom:1.5em;text-align:justify}
+.lead p:first-of-type::first-letter{
+  font-family:"Songti SC","SimSun",serif;font-size:3.1em;float:left;line-height:.86;
+  margin:.08em .14em 0 0;color:var(--red);font-weight:600}
+
+/* ============ 中式装饰：挂落 ============ */
+.gualuo{display:flex;align-items:flex-start;justify-content:center;gap:0;
+  padding:0 34px;margin:56px 0 0;height:38px;position:relative}
+.gualuo svg{width:100%;max-width:400px;height:38px;overflow:visible}
+
+/* 章节 */
+.sec{padding:0 34px;margin-top:44px}
+.sec-head{position:relative;text-align:center;margin-bottom:34px}
+.sec-no{
+  font-family:"Songti SC","SimSun",serif;font-size:13px;letter-spacing:.5em;
+  color:var(--gold);text-indent:.5em;display:block;margin-bottom:12px;
+}
+.sec-title{
+  font-family:"Songti SC","STSong","SimSun",serif;
+  font-size:clamp(24px,5.6vw,31px);font-weight:600;color:var(--ink);
+  letter-spacing:.07em;line-height:1.5;position:relative;display:inline-block;padding:0 6px;
+}
+.sec-title::after{content:"";position:absolute;left:50%;bottom:-14px;transform:translateX(-50%);
+  width:38px;height:2px;background:var(--red)}
+.sec-body p{font-size:16px;line-height:2.1;color:var(--ink-2);margin-bottom:1.45em;text-align:justify}
+.sec-body p strong{color:var(--ink);font-weight:600}
+.sec-body p .hl{color:var(--red);font-weight:600;
+  background:linear-gradient(180deg,transparent 62%,rgba(158,43,30,.13) 62%)}
+
+/* 图 */
+figure{margin:34px -34px;position:relative}
+figure img{width:100%;display:block;filter:saturate(.94) contrast(1.02)}
+figcaption{font-size:11.5px;color:var(--ink-3);letter-spacing:.08em;
+  padding:11px 34px 0;line-height:1.7}
+figcaption::before{content:"▲ ";font-size:8px;color:var(--gold);letter-spacing:0}
+
+/* 竖图：装裱画框 */
+figure.vert{margin:40px auto;max-width:72%;padding:10px;background:#fdfaf3;
+  border:1px solid var(--line);box-shadow:0 14px 44px rgba(60,45,25,.17);position:relative}
+figure.vert::after{content:"";position:absolute;inset:6px;border:1px solid rgba(176,139,79,.28);pointer-events:none}
+figure.vert img{display:block;width:100%;box-shadow:none}
+figure.vert figcaption{padding:13px 2px 2px;text-align:center;font-size:11px}
+
+/* ============ 引言块 ============ */
+.pullquote{margin:40px 0;padding:30px 30px 30px 34px;position:relative;
+  background:var(--paper-2);border-left:3px solid var(--red)}
+.pullquote::before{content:"“";position:absolute;top:6px;left:14px;
+  font-family:"Songti SC",serif;font-size:54px;color:rgba(158,43,30,.2);line-height:1}
+.pullquote p{font-family:"Songti SC","SimSun",serif;font-size:18px;line-height:1.9;
+  color:var(--deep);font-weight:500;letter-spacing:.02em;margin:0;text-align:justify}
+.pullquote cite{display:block;margin-top:12px;font-size:12px;color:var(--ink-3);
+  font-style:normal;letter-spacing:.1em}
+
+/* ============ 数据卡 ============ */
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);
+  margin:36px -34px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stat{background:var(--paper);padding:26px 18px;text-align:center}
+.stat .num{font-family:"Songti SC","SimSun",serif;font-size:31px;font-weight:600;
+  color:var(--red);line-height:1.1;letter-spacing:-.01em}
+.stat .num small{font-size:14px;font-weight:400;margin-left:2px;letter-spacing:0}
+.stat .lb{font-size:11.5px;color:var(--ink-3);margin-top:9px;letter-spacing:.08em;line-height:1.6}
+.stat.wide{grid-column:1/-1}
+
+/* ============ 柱状图 ============ */
+.chart{margin:40px -34px;padding:30px 34px 24px;background:var(--paper-2);position:relative}
+.chart-h{font-size:12px;letter-spacing:.16em;color:var(--ink-3);margin-bottom:24px;
+  display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px}
+.chart-h b{font-size:13px;color:var(--ink);letter-spacing:.1em;font-weight:600}
+.bars{display:flex;align-items:flex-end;gap:10px;height:190px;padding-bottom:0}
+.bar-col{flex:1;display:flex;flex-direction:column;justify-content:flex-end;
+  align-items:center;height:100%;position:relative}
+.bar{width:100%;max-width:64px;background:linear-gradient(180deg,var(--red-2),var(--red));
+  height:0;transition:height 1.4s cubic-bezier(.22,.9,.28,1);position:relative;
+  border-radius:1px 1px 0 0}
+.bar::after{content:attr(data-v);position:absolute;top:-25px;left:50%;transform:translateX(-50%);
+  font-size:12.5px;font-weight:600;color:var(--red);white-space:nowrap;font-family:"Songti SC",serif}
+.bar-lb{font-size:11px;color:var(--ink-3);margin-top:11px;text-align:center;line-height:1.5;letter-spacing:.02em}
+.bar-col.mute .bar{background:linear-gradient(180deg,#c9bda6,#b3a68d)}
+.bar-col.mute .bar::after{color:var(--ink-3)}
+
+/* ============ 时间轴 ============ */
+.timeline{margin:38px -34px;padding:0 34px;position:relative}
+.tl-item{position:relative;padding-left:46px;margin-bottom:30px}
+.tl-item::before{content:"";position:absolute;left:13px;top:8px;width:9px;height:9px;
+  background:var(--paper);border:1.5px solid var(--gold);transform:rotate(45deg);z-index:2}
+.tl-item::after{content:"";position:absolute;left:17px;top:23px;bottom:-32px;width:1px;
+  background:linear-gradient(180deg,var(--line),rgba(176,139,79,.22))}
+.tl-item:last-child{margin-bottom:0}
+.tl-item:last-child::after{display:none}
+.tl-year{font-family:"Songti SC","SimSun",serif;font-size:17px;font-weight:600;
+  color:var(--red);letter-spacing:.05em;margin-bottom:4px}
+.tl-txt{font-size:14.5px;color:var(--ink-2);line-height:1.85}
+.tl-txt b{color:var(--ink);font-weight:600}
+
+/* ============ 视频 ============ */
+.video-wrap{margin:38px -34px;position:relative;background:#0b1310}
+.video-inner{position:relative;width:100%;padding-top:56.25%}
+.video-inner iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-cover{position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;
+  background:#0b1310;cursor:pointer;overflow:hidden;display:block}
+.video-cover img{width:100%;height:100%;object-fit:cover;opacity:.62;
+  transition:opacity .4s,transform .6s;display:block}
+.video-cover:hover img{opacity:.74;transform:scale(1.03)}
+.vplay-btn{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:64px;height:64px;border-radius:50%;border:1.5px solid rgba(253,248,236,.85);
+  background:rgba(158,43,30,.72);display:grid;place-items:center;
+  box-shadow:0 8px 30px rgba(0,0,0,.4);transition:transform .3s,background .3s}
+.video-cover:hover .vplay-btn{transform:translate(-50%,-50%) scale(1.08);background:rgba(158,43,30,.9)}
+.vplay-btn i{width:0;height:0;border-left:16px solid #fdf8ec;border-top:10px solid transparent;
+  border-bottom:10px solid transparent;margin-left:5px;display:block}
+.vplay-txt{position:absolute;left:0;right:0;bottom:22px;text-align:center;
+  font-size:11px;letter-spacing:.22em;color:rgba(253,248,236,.86);text-indent:.22em;
+  text-shadow:0 2px 12px rgba(0,0,0,.7)}
+.video-cap{font-size:11.5px;color:var(--ink-3);padding:12px 34px 0;letter-spacing:.06em;line-height:1.7}
+.video-cap a{color:var(--red);text-decoration:none;border-bottom:1px solid rgba(158,43,30,.3)}
+
+/* ============ 三点式 ============ */
+.points{margin:34px 0}
+.point{padding:24px 0;border-bottom:1px dashed var(--line)}
+.point:last-child{border-bottom:0}
+.point-h{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.point-idx{flex:0 0 auto;width:26px;height:26px;display:grid;place-items:center;
+  font-family:"Songti SC",serif;font-size:13px;color:#fff;background:var(--red);
+  transform:rotate(45deg);border-radius:2px}
+.point-idx i{transform:rotate(-45deg);font-style:normal}
+.point-t{font-family:"Songti SC","SimSun",serif;font-size:17.5px;font-weight:600;
+  color:var(--ink);letter-spacing:.03em}
+.point p{font-size:15px;line-height:1.95;color:var(--ink-2);text-align:justify;margin:0}
+
+/* ============ 结语 ============ */
+.ending{margin-top:56px;padding:26px 34px 0;position:relative;text-align:center}
+.ending p{font-size:16px;line-height:2.1;color:var(--ink-2);margin-bottom:1.4em;text-align:justify}
+.ending .fin{font-family:"Songti SC","SimSun",serif;font-size:19px;line-height:2;
+  color:var(--deep);letter-spacing:.04em;margin-top:34px;text-align:center}
+.seal{display:inline-block;margin:36px auto 0;width:64px;height:64px;
+  border:2px solid var(--red);border-radius:4px;color:var(--red);
+  font-family:"Songti SC",serif;font-size:15px;line-height:1.15;
+  display:flex;flex-wrap:wrap;align-content:center;justify-content:center;
+  padding:6px;letter-spacing:.04em;opacity:.82;transform:rotate(-3deg)}
+
+/* ============ 页脚 ============ */
+.foot{margin-top:52px;padding:34px;background:var(--deep);color:rgba(247,242,231,.62);
+  font-size:11.5px;line-height:2;letter-spacing:.03em}
+.foot b{color:rgba(247,242,231,.9);display:block;margin-bottom:8px;
+  font-size:12px;letter-spacing:.14em;font-weight:500}
+.foot p{margin-bottom:10px}
+.foot .tagline{margin-top:20px;padding-top:18px;border-top:1px solid rgba(217,189,138,.18);
+  font-family:"Songti SC",serif;font-size:13px;letter-spacing:.28em;
+  color:rgba(217,189,138,.75);text-align:center;text-indent:.28em}
+
+/* ============ 音乐播放器 ============ */
+.audio-fab{position:fixed;right:18px;bottom:22px;z-index:80;
+  width:54px;height:54px;border-radius:50%;border:0;cursor:pointer;
+  background:rgba(29,58,51,.9);backdrop-filter:blur(8px);
+  box-shadow:0 6px 24px rgba(20,40,34,.35),0 0 0 1px rgba(217,189,138,.35);
+  display:grid;place-items:center;transition:transform .3s,background .3s}
+.audio-fab:hover{transform:scale(1.06)}
+.audio-fab .disc{width:30px;height:30px;border-radius:50%;
+  background:conic-gradient(from 0deg,#d9bd8a,#8d6c3a,#d9bd8a,#8d6c3a,#d9bd8a);
+  display:grid;place-items:center;animation:spin 6s linear infinite;animation-play-state:paused}
+.audio-fab.playing .disc{animation-play-state:running}
+.audio-fab .disc::after{content:"";width:8px;height:8px;border-radius:50%;
+  background:var(--deep);box-shadow:inset 0 0 0 1.5px rgba(217,189,138,.6)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.audio-tip{position:fixed;right:82px;bottom:36px;z-index:80;
+  font-size:11px;letter-spacing:.1em;color:#fdf8ec;background:rgba(29,58,51,.9);
+  padding:7px 13px;border-radius:20px;white-space:nowrap;
+  opacity:0;transform:translateX(8px);transition:.35s;pointer-events:none;
+  backdrop-filter:blur(6px)}
+.audio-tip.show{opacity:1;transform:none}
+
+/* ============ 滚动动画 ============ */
+.rv{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.2,.7,.3,1),transform .9s cubic-bezier(.2,.7,.3,1)}
+.rv.in{opacity:1;transform:none}
+.rv-d1{transition-delay:.1s}.rv-d2{transition-delay:.2s}.rv-d3{transition-delay:.3s}
+
+/* ============ 响应式 ============ */
+@media (max-width:520px){
+  body{font-size:15.5px}
+  .lead,.sec,.ending{padding-left:24px;padding-right:24px}
+  .gualuo{padding-left:24px;padding-right:24px}
+  figure,.stats,.chart,.timeline,.video-wrap{margin-left:-24px;margin-right:-24px}
+  figure.vert{margin-left:auto;margin-right:auto}
+  figcaption,.chart,.video-cap{padding-left:24px;padding-right:24px}
+  .timeline{padding-left:24px;padding-right:24px}
+  .stat .num{font-size:26px}
+  .bars{height:160px;gap:7px}
+  .bar::after{font-size:11px;top:-22px}
+  .foot{padding:28px 24px}
+  .cover h1{letter-spacing:.06em}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<div class="page">
+<div class="wrap">
+
+<!-- ================= 封面 ================= -->
+<header class="cover">
+  <img class="cover-img" src="assets/harbor.jpg" alt="黄昏时分的集装箱码头堆场与岸桥">
+  <div class="cover-inner">
+    <div class="kicker">形 势 与 政 策 · 专 题 一</div>
+    <h1>开放共赢<br><em>强贸兴邦</em></h1>
+    <p class="cover-sub">从一只集装箱出发<br>看中国如何在高水平对外开放中<br>从贸易大国走向贸易强国</p>
+    <div class="cover-meta">2026—2027 学年第一学期 · 实践作业</div>
+  </div>
+  <div class="scroll-hint">向下滑动<span></span></div>
+</header>
+
+<!-- ================= 导语 ================= -->
+<section class="lead">
+  <p>凌晨四点，洋山港四期的岸桥还在作业。一只印着白色船公司标志的蓝色集装箱被吊起、平移、落下，稳稳压上货轮。它可能来自义乌的小商品市场，也可能装着苏州产的工业机器人。十几个小时后，它将穿过马六甲海峡，出现在鹿特丹的货架上。</p>
+  <p>这样的场景，中国每天都在重复上万次。一只集装箱的重量，称得出一个国家的开放程度。</p>
+</section>
+
+<!-- ================= 01 ================= -->
+<div class="gualuo">
+  <svg viewBox="0 0 400 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g stroke="#b08b4f">
+      <path d="M0 9.5h152" stroke-width="1"/>
+      <path d="M0 13.5h152" stroke-width=".55" opacity=".55"/>
+      <path d="M248 9.5h152" stroke-width="1"/>
+      <path d="M248 13.5h152" stroke-width=".55" opacity=".55"/>
+      <path d="M152 9.5v5.5h-7" stroke-width="1"/>
+      <path d="M248 9.5v5.5h7" stroke-width="1"/>
+      <path d="M171 15v4.5" stroke-width=".7" opacity=".65"/>
+      <path d="M229 15v4.5" stroke-width=".7" opacity=".65"/>
+    </g>
+    <path d="M200 2.5L211.5 14 200 25.5 188.5 14z" fill="#9e2b1e"/>
+    <path d="M200 7.5l6.5 6.5-6.5 6.5-6.5-6.5z" fill="#f7f2e7"/>
+    <path d="M200 25.5v6" stroke="#b08b4f" stroke-width=".8"/>
+    <path d="M195.5 31.5h9L200 37.5z" fill="#b08b4f" opacity=".85"/>
+    <path d="M171 19.5l3.5 3.5-3.5 3.5" stroke="#b08b4f" stroke-width=".7" fill="none" opacity=".65"/>
+    <path d="M229 19.5l-3.5 3.5 3.5 3.5" stroke="#b08b4f" stroke-width=".7" fill="none" opacity=".65"/>
+  </svg>
+</div>
+
+<section class="sec">
+  <div class="sec-head rv">
+    <span class="sec-no">壹</span>
+    <h2 class="sec-title">一条路，走了两千年</h2>
+  </div>
+  <div class="sec-body">
+    <p class="rv">公元前 138 年，张骞出使西域。驼队驮着丝绸和漆器，沿河西走廊一路向西。那时的"开放"，是驼铃、是沙暴、是用脚一步步量出来的信任。</p>
+    <p class="rv">两千多年后，驼队换成了"钢铁驼队"。中欧班列累计开行已突破十万列，把义乌的小商品、重庆的笔记本电脑、合肥的光伏组件，送到欧洲两百多座城市。从驼铃到汽笛，从丝绸之路到"一带一路"，中国人对"开放"的理解其实一直没变——</p>
+  </div>
+
+  <div class="pullquote rv">
+    <p>开放不是把自己的东西送出去，而是把别人的需要接进来。</p>
+  </div>
+
+  <figure class="rv">
+    <img src="assets/railyard.jpg" alt="黄昏中的铁路货运编组场，多条股道上停满货运车厢" loading="lazy">
+    <figcaption>铁路货运编组场。今天的"钢铁驼队"，正沿着古丝路的走向昼夜穿行。</figcaption>
+  </figure>
+
+  <div class="sec-body">
+    <p class="rv">世贸组织总干事伊维拉说过一句话：贸易不是零和游戏，它是把蛋糕做大的唯一办法。这句话，中国用四十多年验证了一遍。</p>
+  </div>
+
+  <div class="timeline rv">
+    <div class="tl-item">
+      <div class="tl-year">1978</div>
+      <div class="tl-txt">中国货物贸易总额 <b>206 亿美元</b>，占全球比重不到 1%</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">2001</div>
+      <div class="tl-txt">加入世界贸易组织，真正嵌入全球产业链分工</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">2013</div>
+      <div class="tl-txt">共建"一带一路"倡议提出，开放从"引进来"走向"一起走"</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">2025</div>
+      <div class="tl-txt">货物贸易进出口 <b>45.47 万亿元</b>，连续 9 年保持全球第一</div>
+    </div>
+  </div>
+
+  <div class="sec-body">
+    <p class="rv">从"世界工厂"到"世界市场"，这条路，中国走了不到半个世纪。</p>
+  </div>
+</section>
+
+<!-- ================= 02 ================= -->
+<div class="gualuo">
+  <svg viewBox="0 0 400 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g stroke="#b08b4f">
+      <path d="M0 9.5h152" stroke-width="1"/>
+      <path d="M0 13.5h152" stroke-width=".55" opacity=".55"/>
+      <path d="M248 9.5h152" stroke-width="1"/>
+      <path d="M248 13.5h152" stroke-width=".55" opacity=".55"/>
+      <path d="M152 9.5v5.5h-7" stroke-width="1"/>
+      <path d="M248 9.5v5.5h7" stroke-width="1"/>
+      <path d="M171 15v4.5" stroke-width=".7" opacity=".65"/>
+      <path d="M229 15v4.5" stroke-width=".7" opacity=".65"/>
+    </g>
+    <path d="M200 2.5L211.5 14 200 25.5 188.5 14z" fill="#9e2b1e"/>
+    <path d="M200 7.5l6.5 6.5-6.5 6.5-6.5-6.5z" fill="#f7f2e7"/>
+    <path d="M200 25.5v6" stroke="#b08b4f" stroke-width=".8"/>
+    <path d="M195.5 31.5h9L200 37.5z" fill="#b08b4f" opacity=".85"/>
+    <path d="M171 19.5l3.5 3.5-3.5 3.5" stroke="#b08b4f" stroke-width=".7" fill="none" opacity=".65"/>
+    <path d="M229 19.5l-3.5 3.5 3.5 3.5" stroke="#b08b4f" stroke-width=".7" fill="none" opacity=".65"/>
+  </svg>
+</div>
+
+<section class="sec">
+  <div class="sec-head rv">
+    <span class="sec-no">贰</span>
+    <h2 class="sec-title">风浪里的答卷</h2>
+  </div>
+  <div class="sec-body">
+    <p class="rv">但 2025、2026 这两年，海面并不平静。单边主义抬头，保护主义筑墙，关税战一轮接着一轮。有人喊"脱钩"，有人喊"去风险"，全球贸易增速被一次次下调。</p>
+    <p class="rv">在这样的背景下，中国外贸交出的答卷是——</p>
+  </div>
+
+  <div class="stats rv">
+    <div class="stat">
+      <div class="num" data-count="45.47" data-dec="2"><span>0</span><small>万亿元</small></div>
+      <div class="lb">2025 年货物贸易<br>进出口总值</div>
+    </div>
+    <div class="stat">
+      <div class="num" data-count="9"><span>0</span><small>年</small></div>
+      <div class="lb">连续保持<br>全球第一</div>
+    </div>
+    <div class="stat">
+      <div class="num" data-count="16.9" data-dec="1"><span>0</span><small>%</small></div>
+      <div class="lb">2026 上半年<br>进出口同比增速</div>
+    </div>
+    <div class="stat">
+      <div class="num" data-count="20" data-dec="0"><span>0</span><small>%</small></div>
+      <div class="lb">2026 年前 10 个月<br>同比增速</div>
+    </div>
+  </div>
+
+  <div class="chart rv">
+    <div class="chart-h"><b>中国货物贸易进出口总值</b><span>单位：万亿元</span></div>
+    <div class="bars" id="bars">
+      <div class="bar-col mute"><div class="bar" data-h="86" data-v="39.1"></div><div class="bar-lb">2023</div></div>
+      <div class="bar-col mute"><div class="bar" data-h="96" data-v="43.8"></div><div class="bar-lb">2024</div></div>
+      <div class="bar-col"><div class="bar" data-h="100" data-v="45.47"></div><div class="bar-lb">2025</div></div>
+      <div class="bar-col"><div class="bar" data-h="98" data-v="44.81"></div><div class="bar-lb">2026<br><span style="font-size:10px;opacity:.7">前 10 月</span></div></div>
+    </div>
+  </div>
+
+  <div class="sec-body">
+    <p class="rv">2026 年上半年，进出口 25.47 万亿元，历史同期首次站上 25 万亿台阶；前三季度刚过，前 10 个月就已经冲到 44.81 万亿元。海关总署用八个字总结："<span class="hl">增势强劲、走势稳健</span>。"</p>
+    <p class="rv">为什么能？答案藏在结构里。</p>
+  </div>
+
+  <figure class="rv">
+    <img src="assets/terminal.jpg" alt="港口集装箱堆场与成排的岸桥起重机" loading="lazy">
+    <figcaption>2025 年，中国高技术产品出口 5.25 万亿元，占出口总额的 19.5%。</figcaption>
+  </figure>
+
+  <div class="sec-body">
+    <p class="rv">2025 年，中国高技术产品出口 5.25 万亿元，同比增长 13.2%，拉动出口增长 2.4 个百分点。其中，专用装备、高端机床、工业机器人出口分别增长 20.6%、21.5% 和 <span class="hl">48.7%</span>——工业机器人出口首次超过进口，中国成为工业机器人的净出口国。锂电池、风力发电机组出口分别增长 26.2%、48.7%。</p>
+    <p class="rv">这已经不是"低价倾销"能解释的事了。当一台"沙漠空调"能在室外 60 摄氏度以上正常工作，当中国陶瓷把传统纹样和海外节日审美缝在一起，卖出去的就不只是商品，而是<strong>解决问题的能力</strong>。</p>
+    <p class="rv">商务部的原话是"顶压增长、亮点纷呈"。我更愿意把它翻译成一句大白话：风浪越大，越看得出船的结构。</p>
+  </div>
+</section>
+
+<!-- ================= 03 ================= -->
+<div class="gualuo">
+  <svg viewBox="0 0 400 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g stroke="#b08b4f">
+      <path d="M0 9.5h152" stroke-width="1"/>
+      <path d="M0 13.5h152" stroke-width=".55" opacity=".55"/>
+      <path d="M248 9.5h152" stroke-width="1"/>
+      <path d="M248 13.5h152" stroke-width=".55" opacity=".55"/>
+      <path d="M152 9.5v5.5h-7" stroke-width="1"/>
+      <path d="M248 9.5v5.5h7" stroke-width="1"/>
+      <path d="M171 15v4.5" stroke-width=".7" opacity=".65"/>
+      <path d="M229 15v4.5" stroke-width=".7" opacity=".65"/>
+    </g>
+    <path d="M200 2.5L211.5 14 200 25.5 188.5 14z" fill="#9e2b1e"/>
+    <path d="M200 7.5l6.5 6.5-6.5 6.5-6.5-6.5z" fill="#f7f2e7"/>
+    <path d="M200 25.5v6" stroke="#b08b4f" stroke-width=".8"/>
+    <path d="M195.5 31.5h9L200 37.5z" fill="#b08b4f" opacity=".85"/>
+    <path d="M171 19.5l3.5 3.5-3.5 3.5" stroke="#b08b4f" stroke-width=".7" fill="none" opacity=".65"/>
+    <path d="M229 19.5l-3.5 3.5 3.5 3.5" stroke="#b08b4f" stroke-width=".7" fill="none" opacity=".65"/>
+  </svg>
+</div>
+
+<section class="sec">
+  <div class="sec-head rv">
+    <span class="sec-no">叁</span>
+    <h2 class="sec-title">不只是“卖货”</h2>
+  </div>
+  <div class="sec-body">
+    <p class="rv">如果说前四十年，中国外贸的关键词是"卖出去"，那现在的关键词，正在变成"<span class="hl">连起来</span>"。</p>
+    <p class="rv">2025 年，中国与共建"一带一路"国家货物贸易额 23.6 万亿元，占外贸总值的 51.9%——已经超过一半；对共建国家非金融类直接投资 2833.6 亿元，增长 18%。同年，服务进出口首次突破 8 万亿元，其中服务出口增长 14.2%；新设外资企业 7 万余家，增长 19.1%。</p>
+  </div>
+
+  <figure class="vert rv">
+    <img src="assets/sunset-yard.jpg" alt="黄昏中的集装箱堆场与岸桥剪影" loading="lazy">
+    <figcaption>堆场里的每一只箱子，背后都是一条产业链</figcaption>
+  </figure>
+
+  <div class="sec-body">
+    <p class="rv">数字背后是具体的画面：印尼雅万高铁上，时速 350 公里的列车穿过稻田；希腊比雷埃夫斯的码头，中国投资的岸桥把集装箱从船上卸下；一个义乌老板娘，用手机直播把圣诞饰品卖给里约热内卢的家庭。</p>
+    <p class="rv">开放共赢不是一句口号。它是别人的铁路、别人的港口、别人的货架，也是我们的订单、我们的就业、我们的税收。</p>
+  </div>
+
+  <figure class="rv">
+    <img src="assets/trailers.jpg" alt="堆场内密集排列的集装箱与拖车" loading="lazy">
+    <figcaption>2025 年，有进出口记录的经营主体超过 78 万家，民营企业占外贸总额比重升至 57.3%。</figcaption>
+  </figure>
+
+  <div class="sec-body">
+    <p class="rv">还有一组容易被忽略的数字：有进出口记录的经营主体超过 78 万家，民营企业占外贸总额的比重升到 57.3%。外贸早就不是少数大企业的游戏了——它是一家镇上的五金厂、一个县城里的圣诞树作坊、一群在跨境直播间里熬夜的年轻人。</p>
+  </div>
+</section>
+
+<!-- ================= 04 ================= -->
+<div class="gualuo">
+  <svg viewBox="0 0 400 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g stroke="#b08b4f">
+      <path d="M0 9.5h152" stroke-width="1"/>
+      <path d="M0 13.5h152" stroke-width=".55" opacity=".55"/>
+      <path d="M248 9.5h152" stroke-width="1"/>
+      <path d="M248 13.5h152" stroke-width=".55" opacity=".55"/>
+      <path d="M152 9.5v5.5h-7" stroke-width="1"/>
+      <path d="M248 9.5v5.5h7" stroke-width="1"/>
+      <path d="M171 15v4.5" stroke-width=".7" opacity=".65"/>
+      <path d="M229 15v4.5" stroke-width=".7" opacity=".65"/>
+    </g>
+    <path d="M200 2.5L211.5 14 200 25.5 188.5 14z" fill="#9e2b1e"/>
+    <path d="M200 7.5l6.5 6.5-6.5 6.5-6.5-6.5z" fill="#f7f2e7"/>
+    <path d="M200 25.5v6" stroke="#b08b4f" stroke-width=".8"/>
+    <path d="M195.5 31.5h9L200 37.5z" fill="#b08b4f" opacity=".85"/>
+    <path d="M171 19.5l3.5 3.5-3.5 3.5" stroke="#b08b4f" stroke-width=".7" fill="none" opacity=".65"/>
+    <path d="M229 19.5l-3.5 3.5 3.5 3.5" stroke="#b08b4f" stroke-width=".7" fill="none" opacity=".65"/>
+  </svg>
+</div>
+
+<section class="sec">
+  <div class="sec-head rv">
+    <span class="sec-no">肆</span>
+    <h2 class="sec-title">买全球，也是一种能力</h2>
+  </div>
+  <div class="sec-body">
+    <p class="rv">很多人只盯着出口，但真正的贸易强国，进口能力同样重要。</p>
+    <p class="rv">2025 年，中国进口规模创历史新高，连续 17 年稳居全球第二大进口市场。从二季度开始，进口连续三个季度保持增长，12 月增速进一步加快到 4.4%。进博会一届接一届地办，广交会一年两季从不断档。</p>
+    <p class="rv">"不仅愿做'世界工厂'，更愿做'世界市场'。"这句话，是商务部对外贸易司司长在 2026 年初说的。对中国普通人来说，它意味着智利的车厘子、新西兰的牛奶、日本的药妆，能更快更便宜地出现在你家楼下的超市。</p>
+    <p class="rv"><strong>开放的红利，最后都会落到具体的货架上。</strong></p>
+  </div>
+
+  <div class="video-wrap rv">
+    <div class="video-inner" id="vbox">
+      <button class="video-cover" id="vplay" aria-label="播放视频">
+        <img src="assets/rail-aerial.jpg" alt="货运列车与铁轨的鸟瞰图">
+        <span class="vplay-btn"><i></i></span>
+        <span class="vplay-txt">点 击 播 放 · 中 欧 班 列</span>
+      </button>
+    </div>
+  </div>
+  <div class="video-cap">▲ 视频：《发现最美铁路｜钢铁驼队建功"一带一路"》，来源：闪电新闻（哔哩哔哩）。若无法播放，<a href="https://www.bilibili.com/video/BV1k3sqetE5t" target="_blank" rel="noopener">点此在新窗口打开</a>。</div>
+
+  <figure class="rv" style="margin-top:34px">
+    <img src="assets/night-port.jpg" alt="夜间灯火通明的港口与货轮" loading="lazy">
+    <figcaption>夜里也不停工的码头，是全球供应链上最稳定的那一环。</figcaption>
+  </figure>
+</section>
+
+<!-- ================= 05 ================= -->
+<div class="gualuo">
+  <svg viewBox="0 0 400 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g stroke="#b08b4f">
+      <path d="M0 9.5h152" stroke-width="1"/>
+      <path d="M0 13.5h152" stroke-width=".55" opacity=".55"/>
+      <path d="M248 9.5h152" stroke-width="1"/>
+      <path d="M248 13.5h152" stroke-width=".55" opacity=".55"/>
+      <path d="M152 9.5v5.5h-7" stroke-width="1"/>
+      <path d="M248 9.5v5.5h7" stroke-width="1"/>
+      <path d="M171 15v4.5" stroke-width=".7" opacity=".65"/>
+      <path d="M229 15v4.5" stroke-width=".7" opacity=".65"/>
+    </g>
+    <path d="M200 2.5L211.5 14 200 25.5 188.5 14z" fill="#9e2b1e"/>
+    <path d="M200 7.5l6.5 6.5-6.5 6.5-6.5-6.5z" fill="#f7f2e7"/>
+    <path d="M200 25.5v6" stroke="#b08b4f" stroke-width=".8"/>
+    <path d="M195.5 31.5h9L200 37.5z" fill="#b08b4f" opacity=".85"/>
+    <path d="M171 19.5l3.5 3.5-3.5 3.5" stroke="#b08b4f" stroke-width=".7" fill="none" opacity=".65"/>
+    <path d="M229 19.5l-3.5 3.5 3.5 3.5" stroke="#b08b4f" stroke-width=".7" fill="none" opacity=".65"/>
+  </svg>
+</div>
+
+<section class="sec">
+  <div class="sec-head rv">
+    <span class="sec-no">伍</span>
+    <h2 class="sec-title">强贸兴邦，强在哪</h2>
+  </div>
+  <div class="sec-body">
+    <p class="rv">从"贸易大国"到"贸易强国"，一字之差，差在三个地方。</p>
+  </div>
+
+  <div class="points">
+    <div class="point rv">
+      <div class="point-h"><span class="point-idx"><i>一</i></span><span class="point-t">从要素流动型开放，到制度型开放</span></div>
+      <p>过去是降关税、开市场；现在是规则、规制、管理、标准与国际接轨。2025 年，中国—东盟自贸区 3.0 版升级议定书签署，把数字经济、绿色经济、供应链、标准合作都装了进去；RCEP 持续实施，原产地累积规则让区域内的产业链咬得更紧。</p>
+    </div>
+    <div class="point rv">
+      <div class="point-h"><span class="point-idx"><i>二</i></span><span class="point-t">从单一货物贸易，到"三支柱"并进</span></div>
+      <p>货物贸易、服务贸易、数字贸易三条腿走路。2025 年货物和服务净出口对经济增长的贡献率达到 32.7%，服务出口增长 14.2%，数字贸易的标准和示范区的建设也在同步推进。</p>
+    </div>
+    <div class="point rv">
+      <div class="point-h"><span class="point-idx"><i>三</i></span><span class="point-t">从追求规模，到锻造韧性</span></div>
+      <p>市场更分散——对共建"一带一路"国家进出口占比过半；主体更多元——78 万家经营主体、民营企业占 57.3%。鸡蛋没有放在一个篮子里，这才是"韧性"两个字的真实含义。</p>
+    </div>
+  </div>
+
+  <figure class="rv">
+    <img src="assets/warehouse-box.jpg" alt="仓库中整齐堆叠的纸箱" loading="lazy">
+    <figcaption>跨境电商综合试验区不断扩围，海外仓"离境即退税、销售后再核算"等政策陆续落地。</figcaption>
+  </figure>
+
+  <div class="sec-body">
+    <p class="rv">而作为一名财会专业的学生，我看到的"强贸兴邦"是另外一组词：关税税则、出口退税、跨境人民币结算、汇率避险、RCEP 原产地规则下的成本核算。</p>
+    <p class="rv">一家做出口的中小企业能不能活下来，很多时候取决于财务能不能把一笔订单的关税成本算准、把汇率风险锁住、把退税的时间差扛过去。<span class="hl">贸易强国的底座，是无数个算得清账的企业。</span>这一点，课本上的分录和港口里的集装箱，说的是同一件事。</p>
+  </div>
+</section>
+
+<!-- ================= 结语 ================= -->
+<div class="gualuo">
+  <svg viewBox="0 0 400 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g stroke="#b08b4f">
+      <path d="M0 9.5h152" stroke-width="1"/>
+      <path d="M0 13.5h152" stroke-width=".55" opacity=".55"/>
+      <path d="M248 9.5h152" stroke-width="1"/>
+      <path d="M248 13.5h152" stroke-width=".55" opacity=".55"/>
+      <path d="M152 9.5v5.5h-7" stroke-width="1"/>
+      <path d="M248 9.5v5.5h7" stroke-width="1"/>
+      <path d="M171 15v4.5" stroke-width=".7" opacity=".65"/>
+      <path d="M229 15v4.5" stroke-width=".7" opacity=".65"/>
+    </g>
+    <path d="M200 2.5L211.5 14 200 25.5 188.5 14z" fill="#9e2b1e"/>
+    <path d="M200 7.5l6.5 6.5-6.5 6.5-6.5-6.5z" fill="#f7f2e7"/>
+    <path d="M200 25.5v6" stroke="#b08b4f" stroke-width=".8"/>
+    <path d="M195.5 31.5h9L200 37.5z" fill="#b08b4f" opacity=".85"/>
+    <path d="M171 19.5l3.5 3.5-3.5 3.5" stroke="#b08b4f" stroke-width=".7" fill="none" opacity=".65"/>
+    <path d="M229 19.5l-3.5 3.5 3.5 3.5" stroke="#b08b4f" stroke-width=".7" fill="none" opacity=".65"/>
+  </svg>
+</div>
+
+<section class="ending">
+  <p class="rv">一只集装箱从洋山港出发，要经过岸桥司机、报关员、船代、货代、保险、银行、税务……几十个环节、上百个人。</p>
+  <p class="rv">"开放共赢 强贸兴邦"这八个字，最后都落在这一个个具体的人手上。</p>
+  <p class="rv">风浪还会来。但只要码头上的灯还亮着，船就会一艘接一艘地靠岸。</p>
+  <div class="fin rv">潮平两岸阔，风正一帆悬。</div>
+  <div class="seal rv">开放<br>共赢</div>
+</section>
+
+<footer class="foot">
+  <b>数 据 来 源</b>
+  <p>中国政府网《2025 年进出口总值创历史新高，连续 9 年实现增长》（2026-01）；国务院政策例行吹风会文字实录（2026-02-27）；海关总署 2026 年上半年及前 10 个月进出口情况新闻发布会；商务部《2025 年商务发展总体平稳、稳中有进》。</p>
+  <b>图 片 与 音 乐</b>
+  <p>配图来自 Pexels 免费图库（摄影师 Bilal Ahmed、Wolfgang Weiser 等），可免费使用。背景音乐《Cinematic Motivational》来自 Mixkit 免费音乐库，CC 授权。视频来源：闪电新闻，经哔哩哔哩嵌入。</p>
+  <b>说 明</b>
+  <p>本文为 2026—2027 学年第一学期《形势与政策》课程"开放共赢 强贸兴邦"专题实践作业，以网络推文形式呈现。</p>
+  <div class="tagline">开 放 共 赢 · 强 贸 兴 邦</div>
+</footer>
+
+</div>
+</div>
+
+<!-- 音乐 -->
+<audio id="bgm" src="assets/bgm-262.mp3" loop preload="metadata"></audio>
+<button class="audio-fab" id="fab" aria-label="播放背景音乐">
+  <span class="disc"></span>
+</button>
+<div class="audio-tip" id="tip">点一下，配着音乐读</div>
+
+<script>
+(function(){
+  'use strict';
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* 调试用：?y=1200 定位 */
+  var _flat = new URLSearchParams(location.search).get('flat') === '1';
+
+  /* ---------- 阅读进度 ---------- */
+  var bar = document.getElementById('bar');
+  function onScroll(){
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    var p = h > 0 ? (window.scrollY / h) * 100 : 0;
+    bar.style.width = p.toFixed(2) + '%';
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* ---------- 滚动淡入 ---------- */
+  var rvs = document.querySelectorAll('.rv');
+  if(_flat){
+    rvs.forEach(function(el){ el.classList.add('in'); });
+  } else if('IntersectionObserver' in window && !reduce){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -8% 0px'});
+    rvs.forEach(function(el){ io.observe(el); });
+  } else {
+    rvs.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* ---------- 数字滚动 ---------- */
+  function countUp(el){
+    var target = parseFloat(el.dataset.count);
+    var dec = parseInt(el.dataset.dec || '0', 10);
+    var span = el.querySelector('span');
+    var dur = 1500, t0 = null;
+    function step(ts){
+      if(!t0) t0 = ts;
+      var p = Math.min((ts - t0) / dur, 1);
+      var ease = 1 - Math.pow(1 - p, 3);
+      span.textContent = (target * ease).toFixed(dec);
+      if(p < 1) requestAnimationFrame(step);
+      else span.textContent = target.toFixed(dec);
+    }
+    if(reduce){ span.textContent = target.toFixed(dec); return; }
+    requestAnimationFrame(step);
+  }
+  var statEls = document.querySelectorAll('.stat .num');
+  if(_flat){
+    statEls.forEach(function(el){
+      el.querySelector('span').textContent = parseFloat(el.dataset.count).toFixed(parseInt(el.dataset.dec||'0',10));
+    });
+  } else if('IntersectionObserver' in window){
+    var io2 = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting){ countUp(e.target); io2.unobserve(e.target); }
+      });
+    }, {threshold:.5});
+    statEls.forEach(function(el){ io2.observe(el); });
+  } else {
+    statEls.forEach(countUp);
+  }
+
+  /* ---------- 柱状图生长 ---------- */
+  var barsBox = document.getElementById('bars');
+  if(barsBox){
+    var grow = function(){
+      barsBox.querySelectorAll('.bar').forEach(function(b, i){
+        setTimeout(function(){ b.style.height = b.dataset.h + '%'; }, i * 140);
+      });
+    };
+    if(reduce || _flat){ grow(); }
+    else if('IntersectionObserver' in window){
+      var io3 = new IntersectionObserver(function(es){
+        es.forEach(function(e){ if(e.isIntersecting){ grow(); io3.unobserve(e.target); } });
+      }, {threshold:.35});
+      io3.observe(barsBox);
+    } else { grow(); }
+  }
+
+  /* ---------- 背景音乐 ---------- */
+  var bgm = document.getElementById('bgm');
+  var fab = document.getElementById('fab');
+  var tip = document.getElementById('tip');
+  var tipShown = false;
+
+  function showTip(txt){
+    tip.textContent = txt;
+    tip.classList.add('show');
+    clearTimeout(tip._t);
+    tip._t = setTimeout(function(){ tip.classList.remove('show'); }, 2600);
+  }
+
+  fab.addEventListener('click', function(){
+    if(bgm.paused){
+      bgm.volume = 0;
+      bgm.play().then(function(){
+        fab.classList.add('playing');
+        fab.setAttribute('aria-label','暂停背景音乐');
+        // 淡入
+        var v = 0;
+        var fade = setInterval(function(){
+          v = Math.min(v + 0.04, 0.42);
+          bgm.volume = v;
+          if(v >= 0.42) clearInterval(fade);
+        }, 60);
+      }).catch(function(){
+        showTip('浏览器阻止了自动播放');
+      });
+    } else {
+      bgm.pause();
+      fab.classList.remove('playing');
+      fab.setAttribute('aria-label','播放背景音乐');
+    }
+  });
+
+  // 首次提示
+  setTimeout(function(){
+    if(!tipShown){ showTip('点一下，配着音乐读'); tipShown = true; }
+  }, 3200);
+
+  /* ---------- 视频点击加载 ---------- */
+  var vplay = document.getElementById('vplay');
+  if(vplay){
+    vplay.addEventListener('click', function(){
+      var box = document.getElementById('vbox');
+      box.innerHTML = '<iframe src="https://player.bilibili.com/player.html?bvid=BV1k3sqetE5t&page=1&high_quality=1&danmaku=0&autoplay=1"'
+        + ' scrolling="no" frameborder="0" framespacing="0" allowfullscreen="true"'
+        + ' sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"'
+        + ' title="钢铁驼队建功一带一路，中欧班列畅行草原丝路"></iframe>';
+    });
+  }
+
+  /* ---------- 图片加载失败兜底 ---------- */
+  document.querySelectorAll('img').forEach(function(img){
+    img.addEventListener('error', function(){
+      img.style.background = 'linear-gradient(135deg,#e6ddca,#d8cdb4)';
+      img.style.minHeight = '200px';
+    });
+  });
+})();
+</script>
+</body>
+</html>
